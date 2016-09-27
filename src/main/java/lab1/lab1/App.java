@@ -1,13 +1,17 @@
 package lab1.lab1;
 
-/**
- * Hello world!
- *
- */
+import java.util.*;
+
 public class App 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Podaj nazwe pliku: ");
+        String fileName = scan.nextLine();
+        System.out.print("Podaj string poprawny: ");
+        String strPopr = scan.nextLine();
+        System.out.print("Podaj string niepoprawny: ");
+        String strNiePopr = scan.nextLine();
     }
 }
