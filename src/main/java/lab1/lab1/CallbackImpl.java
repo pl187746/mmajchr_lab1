@@ -4,6 +4,10 @@ import java.util.*;
 public class CallbackImpl implements Callback {
 	
 	private Scanner scan;
+	
+	public CallbackImpl(Scanner sc) {
+		this.scan = sc;
+	}
 
 	public String callback(boolean result) {
 		if(result)
