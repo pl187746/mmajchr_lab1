@@ -32,7 +32,6 @@ public class FileOperation {
 		} catch (IOException e) {
 			System.out.println(incorrectString);
 			result = callback.callback(false);
-			e.printStackTrace();
 		}
 		return result;
 	}
