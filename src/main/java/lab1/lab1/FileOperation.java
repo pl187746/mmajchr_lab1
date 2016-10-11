@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class FileOperation {
 
-	public static void saveFile(String fileName, String correctString, String incorrectString, Callback callback) {
+	public static void saveFile(String fileName, String correctString, String incorrectString, FirstCallback callback) {
 		String result = fileName;
 		while (result != null) {
 			result = saveNewFile(result, callback, correctString, incorrectString);
@@ -14,7 +14,7 @@ public class FileOperation {
 
 	}
 
-	public static String saveNewFile(String fileName, Callback callback, String correctString, String incorrectString) {
+	public static String saveNewFile(String fileName, FirstCallback callback, String correctString, String incorrectString) {
 		FileWriter fw = null;
 		File file = null;
 		String result;

@@ -1,11 +1,11 @@
 package lab1.lab1;
 import java.util.*;
 
-public class CallbackImpl implements Callback {
+public class FirstCallbackImpl implements FirstCallback {
 	
 	private Scanner scan;
 	
-	public CallbackImpl(Scanner sc) {
+	public FirstCallbackImpl(Scanner sc) {
 		this.scan = sc;
 	}
 

@@ -13,7 +13,7 @@ public class App
         String strPopr = scan.nextLine();
         System.out.print("Podaj string niepoprawny: ");
         String strNiePopr = scan.nextLine();
-        CallbackImpl callback = new CallbackImpl(scan);
+        FirstCallbackImpl callback = new FirstCallbackImpl(scan);
         FileOperation.saveFile(fileName, strPopr, strNiePopr, callback);
     }
 }
