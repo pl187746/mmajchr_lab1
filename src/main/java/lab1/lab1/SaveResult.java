@@ -6,6 +6,33 @@ public class SaveResult {
 	private String incorrectMsg;
 	private boolean success;
 
+	public SaveResult() {
+	}
+
+	public SaveResult(String fileName, String correctMsg, String incorrectMsg, boolean success) {
+		super();
+		this.fileName = fileName;
+		this.correctMsg = correctMsg;
+		this.incorrectMsg = incorrectMsg;
+		this.success = success;
+	}
+
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
+	}
+
+	public void setCorrectMsg(String correctMsg) {
+		this.correctMsg = correctMsg;
+	}
+
+	public void setIncorrectMsg(String incorrectMsg) {
+		this.incorrectMsg = incorrectMsg;
+	}
+
+	public void setSuccess(boolean success) {
+		this.success = success;
+	}
+
 	public String getFileName() {
 		return fileName;
 	}
@@ -22,11 +49,4 @@ public class SaveResult {
 		return success;
 	}
 
-	public SaveResult(String fileName, String correctMsg, String incorrectMsg, boolean success) {
-		super();
-		this.fileName = fileName;
-		this.correctMsg = correctMsg;
-		this.incorrectMsg = incorrectMsg;
-		this.success = success;
-	}
 }
