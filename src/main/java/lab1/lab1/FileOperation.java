@@ -14,24 +14,29 @@ public class FileOperation {
 
 	}
 
-	public static String saveNewFile(String fileName, FirstCallback callback, String correctString, String incorrectString) {
-		FileWriter fw = null;
+	public static String saveNewFile(String fileName, FirstCallback callback, String correctString,
+			String incorrectString) {
+
 		File file = null;
 		String result;
+		SaveResult saveResult = new SaveResult(fileName, correctString, incorrectString);
+		SecondCallback seconCallback = new SecondCallbackImpl(saveResult);
 		try {
 			file = new File(fileName + ".txt");
 			if (!file.exists()) {
 				file.createNewFile();
 			}
-			fw = new FileWriter(file);
-			fw.write("Hello World");
-			fw.flush();
-			fw.close();
+			try (FileWriter fw = new FileWriter(file)) {
+				fw.write("Hello World");
+				fw.flush();
+			}
 			System.out.println(correctString);
-			return callback.callback(true);
+			saveResult.setSuccess(true);
+			return callback.callback(seconCallback);
 		} catch (IOException e) {
 			System.out.println(incorrectString);
-			result = callback.callback(false);
+			saveResult.setSuccess(false);
+			result = callback.callback(seconCallback);
 		}
 		return result;
 	}
