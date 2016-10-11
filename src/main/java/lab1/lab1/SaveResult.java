@@ -9,6 +9,14 @@ public class SaveResult {
 	public SaveResult() {
 	}
 
+	public SaveResult(String fileName, String correctMsg, String incorrectMsg) {
+		super();
+		this.fileName = fileName;
+		this.correctMsg = correctMsg;
+		this.incorrectMsg = incorrectMsg;
+
+	}
+
 	public SaveResult(String fileName, String correctMsg, String incorrectMsg, boolean success) {
 		super();
 		this.fileName = fileName;
