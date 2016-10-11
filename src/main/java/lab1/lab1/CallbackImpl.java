@@ -16,6 +16,7 @@ public class CallbackImpl implements Callback {
 			System.out.print("Czy chcesz zapisac plik pod inna nazwa? [T/N] ");
 			String c = scan.nextLine();
 			if(c.startsWith("T") || c.startsWith("t")) {
+				System.out.print("Nowa nazwa pliku: ");
 				String newFileName = scan.nextLine();
 				return newFileName;
 			} else if(c.startsWith("N") || c.startsWith("n"))
